@@ -13,6 +13,8 @@ int r = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите c: ");
 int c = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine();
+
 int[,] FillMatrix(int rows, int columns)
 {
     int[,] matrix = new int[rows, columns];
@@ -52,7 +54,7 @@ for (int i = 0; i < Matrix1.GetLength(0); i++)
 
         Sum += Matrix1[i, j];
     }
-    Console.WriteLine(Sum);
+    // Console.WriteLine(Sum);
     SumResult[i] = Sum;
     Sum = 0;
 }
@@ -66,4 +68,4 @@ int indexMin = Array.IndexOf(SumResult, minVal);
 
 // Console.WriteLine(minVal);
 
-Console.WriteLine("Минимальная сумма элементов массива находится в строке №"+indexMin+1+".");
+Console.WriteLine($"Минимальная сумма элементов массива находится в строке: {indexMin+1}");
