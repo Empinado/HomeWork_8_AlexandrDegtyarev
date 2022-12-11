@@ -15,6 +15,7 @@ int c = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите b: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
+if(r+c+b>=14) Console.WriteLine("Такой массив невозможно заполнить неповторяющимися двухзначными числами. Сумма сторон массива не должна превышать значение - 13.");
 //Создаем метод, который будет проверять повторения элемента в массиве. И передавать результат в условие заполнения массива. Чтобы избежать повторений.
 bool FindElement(int[,,] array, int el)
 {
@@ -63,16 +64,17 @@ void PrintMatrix(int[,,] matrix)
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
                 Console.Write($"{matrix[i, j, k]} ({i},{j},{k}); ");
+                
             }
-
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
 }
-
+if(r+c+b<14)
+{
 int[,,] Matrix1 = FillMatrix(r, c, b);
 PrintMatrix(Matrix1);
 Console.WriteLine();
-
+}
 
 
